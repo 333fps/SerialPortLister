@@ -1,6 +1,8 @@
 # SerialPortLister
 
-A sinmple way to list serial ports under Windows.
+A sinmple way to list serial ports for Windows.
+
+Usage:
 ```sh
 PS D:\Sources\c++\SerialPortLister\x64\Release> .\SerialPortLister.exe
 Before sorting...
