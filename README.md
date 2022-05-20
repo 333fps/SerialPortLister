@@ -1,6 +1,6 @@
 # SerialPortLister
 
-A sinmple way to list serial ports for Windows.
+A simple way to list serial ports for Windows.
 
 Usage:
 ```sh
