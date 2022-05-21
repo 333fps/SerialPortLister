@@ -13,7 +13,6 @@
 class SerialPortLister
 {
 public:
-
 	struct SerialPortInfo
 	{
 		std::string portName;
