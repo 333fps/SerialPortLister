@@ -4,7 +4,7 @@ int main()
 {
 	SerialPortLister serialPortLister;
 
-	std::cout << "Before sorting...\n" << std::endl;
+	std::cout << "\nBefore sorting...\n" << std::endl;
 
 	for (auto& port : serialPortLister.ports())
 	{

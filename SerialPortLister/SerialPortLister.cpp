@@ -71,8 +71,8 @@ void SerialPortLister::registryProperty(DWORD p_property, std::string& p_string)
 			return;
 		}
 	}
-	std::vector<BYTE> buffer{ size, std::allocator<BYTE>{} };
 
+	std::vector<BYTE> buffer{ size, std::allocator<BYTE>{} };
 	if (!SetupDiGetDeviceRegistryPropertyA(this->m_deviceInfo, &this->m_deviceInfoData, p_property, &type, (PBYTE)buffer.data(), size, &size))
 	{
 		return;
@@ -80,11 +80,9 @@ void SerialPortLister::registryProperty(DWORD p_property, std::string& p_string)
 
 	if (type != REG_SZ)
 	{
-		std::cout << "errr3" << std::endl;
-
-		SetLastError(ERROR_INVALID_DATA);
 		return;
 	}
+
 	p_string = reinterpret_cast<const char*>(buffer.data());
 }
 
