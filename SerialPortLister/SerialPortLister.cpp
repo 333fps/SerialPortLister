@@ -16,6 +16,7 @@ SerialPortLister::SerialPortLister()
 	int deviceIdx{ 0 };
 	while (true)
 	{
+		ZeroMemory(&this->m_deviceInfoData, sizeof(SP_DEVINFO_DATA));
 		this->m_deviceInfoData.cbSize = sizeof(SP_DEVINFO_DATA);
 
 		if (!SetupDiEnumDeviceInfo(this->m_deviceInfo, deviceIdx, &this->m_deviceInfoData))
